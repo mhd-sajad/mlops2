@@ -1,0 +1,24 @@
+schema: '2.0'
+stages:
+  data_prep:
+    cmd: python data_prep.py
+    deps:
+    - path: data_prep.py
+      hash: md5
+      md5: 008d7539b6a3e6b789f11f06092a7de0
+      size: 279
+    - path: data_v1.csv
+      hash: md5
+      md5: 8a2e4d629d2444d92e862652e06ca8cf
+      size: 414
+  train:
+    cmd: python train.py
+    deps:
+    - path: data_v1.csv
+      hash: md5
+      md5: 8a2e4d629d2444d92e862652e06ca8cf
+      size: 414
+    - path: train.py
+      hash: md5
+      md5: e9a715bc72c9aa31752dc52cd4e4a1a8
+      size: 1407

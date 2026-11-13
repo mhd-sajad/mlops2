@@ -1,0 +1,13 @@
+stages:
+  data_prep:
+    cmd: python data_prep.py
+    deps:
+      - data_v1.csv
+      - data_prep.py
+
+  train:
+    cmd: python train.py
+    deps:
+      - data_v1.csv
+      - train.py
+   
